@@ -17,7 +17,7 @@
             color: #ecf0f1;
             border-radius: 8px;
             padding: 20px;
-            width: 300px;
+            width: 700px;
             margin: 0 auto;
         }
         .widget h1 {
@@ -55,52 +55,51 @@
     </style>
 </head>
 <body>
-    <h1>Animated Weather Widget</h1>
+    <h1>Animated Weather Widget</h1><br><br>
     <div class="widget">
-        <h1>Friday Weather</h1>
+        <h1>Monday Weather</h1>
         <div class="weather-icon">☀</div>
-        <div class="temp">21°C</div>
-        <div>Max 27°C / Min 10°C</div>
+        <div class="temp">{{data.temperature_celsius}} °C</div>
+        <div>{{data.temp_min_celsius}} °C / {{data.temp_max_celsius}} °C</div>
         <div class="forecast">
             <div class="forecast-item">
-                <div class="day">Fri</div>
-                <div class="icon">🌙</div>
-                <div class="temp-range">27°C</div>
-            </div>
-            <div class="forecast-item">
-                <div class="day">Sat</div>
-                <div class="icon">⛅</div>
-                <div class="temp-range">20°C</div>
-            </div>
-            <div class="forecast-item">
-                <div class="day">Sun</div>
-                <div class="icon">☁</div>
-                <div class="temp-range">18°C</div>
-            </div>
-            <div class="forecast-item">
-                <div class="day">Mon</div>
+                <div class="day">Humidity</div>
                 <div class="icon">🌧</div>
-                <div class="temp-range">17°C</div>
+                <div class="temp-range">{{data.humidity}} %</div>
             </div>
             <div class="forecast-item">
-                <div class="day">Tue</div>
+                <div class="day">Wind</div>
                 <div class="icon">🌧</div>
-                <div class="temp-range">17°C</div>
+                <div class="temp-range">{{data.wind}} km/hr</div>
             </div>
             <div class="forecast-item">
-                <div class="day">Wed</div>
+                <div class="day">Cloud</div>
                 <div class="icon">☁</div>
-                <div class="temp-range">24°C</div>
+                <div class="temp-range">{{data.cloud}}</div>
             </div>
             <div class="forecast-item">
-                <div class="day">Thu</div>
+                <div class="day">Pressure</div>
                 <div class="icon">🌦</div>
-                <div class="temp-range">25°C</div>
+                <div class="temp-range">{{data.pressure}} Hg</div>
+            </div>
+            <div class="forecast-item">
+                <div class="day">Feel Temperature</div>
+                <div class="icon">⛅</div>
+                <div class="temp-range">{{data.feel_temp}} °C</div>
+            </div>
+            <div class="forecast-item">
+                <div class="day">Sea Level</div>
+                <div class="icon">🌙</div>
+                <div class="temp-range">{{data.sea_level}} km</div>
+            </div>
+            <div class="forecast-item">
+                <div class="day">Ground Level</div>
+                <div class="icon">☁</div>
+                <div class="temp-range">{{data.grnd_level}} km</div>
             </div>
         </div>
     </div>
     <footer>
-        © 2016 Animated Weather Widget.
     </footer>
 </body>
 </html>
